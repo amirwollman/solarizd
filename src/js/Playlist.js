@@ -1,12 +1,13 @@
 define([
     'text!template_dir/playlist/pane.html',
     'text!template_dir/playlist/progress.html',
+    'text!template_dir/playlist/actions.html',
     'text!template_dir/playlist/item.html',
     'text!template_dir/playlist/related.html',
     'ui-sortable',
     './Services',
     'angular'
-], function (PaneTemplate, ProgressTemplate, ItemTemplate, RelatedTemplate) {
+], function (PaneTemplate, ProgressTemplate, ActionsTemplate, ItemTemplate, RelatedTemplate) {
     function mouseCoords (event) {
         var totalOffsetX = 0,
             totalOffsetY = 0,
@@ -123,6 +124,19 @@ define([
 
                                 if (!$scope.$$phase) $scope.$digest();
                             });
+                        }
+                    };
+
+                return definitions;
+            }]).directive('playlistActions', ['$rootScope', 'youtubePlayer', function ($rootScope, youtubePlayer) {
+                var definitions = {
+                        restrict: 'E',
+                        template: ActionsTemplate,
+                        replace: true,
+                        scope: true,
+                        link: function ($scope, $element, $attrs) {
+                        },
+                        controller: function ($scope, $element, $attrs) {
                         }
                     };
 

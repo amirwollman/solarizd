@@ -72,6 +72,28 @@
         }
     }
 }
+.ui-circle-button (@icon) {
+    width:@row;
+    height:@row;
+    border-radius:50%;
+    border:solid @medium-border @white;
+    background:transparent;
+    font-size:@huge-text *1.5;
+    color:@white;
+    text-align:center;
+    padding:@row-pad @column-pad;
+    margin:0 @column-pad;
+    cursor:pointer;
+    .flexbox(@dir:column; @align:center);
+
+    &:after {
+        .icon(@icon);
+    }
+
+    &:active {
+        background:@base1;
+    }
+}
 .ui-list-item(@odd-bg:lighten(@base02, 25%);@even-bg:lighten(@base02, 15%)) {
     color:@white;
     .ui-hseparator;

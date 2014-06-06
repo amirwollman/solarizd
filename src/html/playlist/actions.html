@@ -1,0 +1,18 @@
+<div class="playlist-actions">
+    <menu type="toolbar" class="actions-menu">
+        <li class="list-item" data-value="save" ng-click="openSave">
+            <span class="text">Save</span>
+        </li>
+        <li class="list-item" data-value="load" ng-click="openLoad">
+            <span class="text">Load</span>
+        </li>
+        <li class="list-item" data-value="clear" ng-click="clearPlaylist">
+            <span class="text">Clear Playlist</span>
+        </li>
+    </menu>
+    <div class="save-bar">
+        <span class="cancel"></span>
+        <input class="input" type="text" ng-value="currentPlaylist" />
+        <span class="submit"></span>
+    </div>
+</div>

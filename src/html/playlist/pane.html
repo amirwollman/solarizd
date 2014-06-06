@@ -1,5 +1,6 @@
 <section class="playlist-pane" ng-class="{ 'active': !!items.length && ready }">
     <playlist-progress></playlist-progress>
+    <playlist-actions></playlist-actions>
     <section class="playlist-wrapper">
         <ul class="indices">
             <li class="index" ng-repeat="item in items track by $index"
